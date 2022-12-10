@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const list = {
+            items: [{
+                'name': "Books",
+                'price': 250
+            }, {
+                'name': "Graphs",
+                'price': 500
+            }, {
+                'name': "Colors",
+
+
+            }]
+
+        };
+        try {
+            list.items.forEach(function(items) {
+                if (items.price === undefined) {
+                   // throw new Error("Give value");
+                }
+                document.write(items.price);
+            })
+        } catch (e) {
+            document.write(e.message);
+        }
+    </script>
+<!-- <script>
+    try{
+        document.write("Inside try");
+        add();
+        }
+        catch(e)
+        {
+            document.write("<br>Message <br>"+e.message+" <br>"+e.name+"<br>"+e.stack);
+        }
+        finally{
+            document.write("Finally entered");
+        }
+</script> -->
+</body>
+
+</html>
